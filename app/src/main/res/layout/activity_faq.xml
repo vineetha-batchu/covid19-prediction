@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_calculated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On What Basis Covid is Predicted?"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_calculated_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7222643/"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_cretinine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What are Cretinine levels?"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_cretinine_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is BMI?"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_bmi_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About this application"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_about_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        />
+
+
+</LinearLayout>
