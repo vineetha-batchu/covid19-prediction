@@ -4,7 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MASTERS/AndroidProjects/Group2_Project/app/src/main/res/layout/activity_covid_prediction.xml" value="0.10144927536231885" />
+        <entry key="..\:/Android-Project/AndroidGroup02/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Android-Project/AndroidGroup02/app/src/main/res/layout/activity_main_page.xml" value="0.1796875" />
         <entry key="..\:/MASTERS/AndroidProjects/Group2_Project/app/src/main/res/layout/activity_main.xml" value="0.10144927536231885" />
+
+        <entry key="..\:/Users/S542406/AndroidGroup02/AndroidGroup02/app/src/main/res/drawable/floating_button_foreground.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/S542406/AndroidGroup02/AndroidGroup02/app/src/main/res/drawable/header_layout.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/S542406/AndroidGroup02/AndroidGroup02/app/src/main/res/drawable/ic_baseline_keyboard_backspace_24.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/S542406/AndroidGroup02/AndroidGroup02/app/src/main/res/layout/activity_faq.xml" value="0.1796875" />
+        <entry key="..\:/Users/S542406/AndroidGroup02/AndroidGroup02/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Users/S542406/AndroidGroup02/AndroidGroup02/app/src/main/res/layout/activity_main_page.xml" value="0.1" />
+        <entry key="..\:/Users/S542406/AndroidGroup02/AndroidGroup02/app/src/main/res/layout/activity_medical_reminder.xml" value="0.1796875" />
       </map>
     </option>
   </component>

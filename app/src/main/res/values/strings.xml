@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Home</string>
+    <string name="app_name">Covid Prediction</string>
     <string name="covid_prediction">Covid Prediction</string>
     <string name="diet_chart_amp_bmi"><![CDATA[Diet Chart & BMI]]></string>
     <string name="medicine_remainder">Medicine Remainder</string>
