@@ -3,11 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android-Project/AndroidGroup02/app/src/main/res/layout/activity_bmi.xml" value="0.1796875" />
-        <entry key="..\:/Android-Project/AndroidGroup02/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
-        <entry key="..\:/Android-Project/AndroidGroup02/app/src/main/res/layout/activity_main_page.xml" value="0.1796875" />
-        <entry key="..\:/Android-Project/AndroidGroup02/app/src/main/res/layout/activity_vaccination.xml" value="0.1796875" />
+        <entry key="..\:/MASTERS/AndroidProjects/Group2_Project/app/src/main/res/layout/activity_covid_prediction.xml" value="0.10144927536231885" />
         <entry key="..\:/MASTERS/AndroidProjects/Group2_Project/app/src/main/res/layout/activity_main.xml" value="0.10144927536231885" />
+        <entry key="..\:/MASTERS/AndroidProjects/Group2_Project/app/src/main/res/layout/activity_pharmacy_list.xml" value="0.13858695652173914" />
       </map>
     </option>
   </component>

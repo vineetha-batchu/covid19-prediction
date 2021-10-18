@@ -25,6 +25,7 @@
         <activity android:name=".BmiActivity"/>
         <activity android:name=".VaccinationActivity"/>
         <activity android:name=".CovidPrediction"/>
+        <activity android:name=".PharmacyListActivity"/>
     </application>
 
 </manifest>
