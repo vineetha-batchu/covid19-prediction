@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-    CardView medicine, faq, bmi, vaccination;
+    CardView medicine, faq, bmi, vaccination, prediction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
         faq = findViewById(R.id.btn_faq);
         bmi = findViewById(R.id.btnBmi);
         vaccination = findViewById(R.id.btnVaccine);
+        prediction = findViewById(R.id.btnPredict);
 
         medicine.setOnClickListener(v -> medicineReminder(v));
         faq.setOnClickListener(v -> faq(v));
         bmi.setOnClickListener(v -> bmi(v));
         vaccination.setOnClickListener(v -> vaccination(v));
+        prediction.setOnClickListener(v -> prediction(v));
     }
 
     public void medicineReminder(View v){
@@ -43,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void vaccination(View v){
         Intent explicit = new Intent(MainActivity.this, VaccinationActivity.class);
+        startActivity(explicit );
+    }
+
+    public void prediction(View v){
+        Intent explicit = new Intent(MainActivity.this, CovidPrediction.class);
         startActivity(explicit );
     }
 }
