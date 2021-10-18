@@ -20,6 +20,7 @@
         </activity>
 
         <activity android:name=".MainPage"/>
+        <activity android:name=".FaqActivity"/>
     </application>
 
 </manifest>
