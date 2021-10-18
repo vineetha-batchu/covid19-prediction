@@ -25,6 +25,7 @@
         <activity android:name=".MainPage"/>
         <activity android:name=".FaqActivity"/>
         <activity android:name=".BmiActivity"/>
+        <activity android:name=".VaccinationActivity"/>
     </application>
 
 </manifest>
