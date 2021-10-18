@@ -3,4 +3,11 @@
     <string name="covid_prediction">Covid Prediction</string>
     <string name="diet_chart_amp_bmi"><![CDATA[Diet Chart & BMI]]></string>
     <string name="medicine_remainder">Medicine Remainder</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="height">Height</string>
+    <string name="enter_height_in_inches">Enter Height In Inches</string>
+    <string name="weight">Weight</string>
+    <string name="enter_weight_in_kg">Enter Weight In Kg</string>
+    <string name="calculate">Calculate</string>
+
 </resources>
