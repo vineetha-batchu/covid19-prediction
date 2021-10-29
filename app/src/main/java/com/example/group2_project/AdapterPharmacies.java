@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class AdapterPlaces extends RecyclerView.Adapter<AdapterPlaces.MyViewHolder>{
+public class AdapterPharmacies extends RecyclerView.Adapter<AdapterPharmacies.MyViewHolder>{
 
-    private List<String> placesList;
+    private List<String> pharmaciesList;
     private TextView message,time;
 
-    public AdapterPlaces(List<String> placesList) {
-        this.placesList = placesList;
+    public AdapterPharmacies(List<String> pharmaciesList) {
+        this.pharmaciesList = pharmaciesList;
     }
 
     @NonNull
@@ -29,12 +29,12 @@ public class AdapterPlaces extends RecyclerView.Adapter<AdapterPlaces.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        message.setText(placesList.get(i));
+        message.setText(pharmaciesList.get(i));
     }
 
     @Override
     public int getItemCount() {
-        return placesList.size();
+        return pharmaciesList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{

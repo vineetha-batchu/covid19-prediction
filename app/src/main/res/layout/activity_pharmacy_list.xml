@@ -9,29 +9,29 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pharmacies In Missouri"
+        android:text="Pharmacies around 50 miles from Maryville"
         android:textStyle="bold"
         android:textSize="20sp"/>
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_choose_place"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:hint="Enter The Place">
+        android:text="Choose the place"
+        android:layout_gravity="center_horizontal"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
+    <TextView
+        android:id="@+id/tv_selected_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected place : "
+        android:textStyle="bold"
+        android:textSize="16sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="14dp"
         />
 </LinearLayout>
