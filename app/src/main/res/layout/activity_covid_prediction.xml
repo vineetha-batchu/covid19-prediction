@@ -10,7 +10,7 @@
     android:scrollbars="none">
 
     <LinearLayout
-
+        android:id="@+id/linear_layout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -20,11 +20,14 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Age">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_age"
+                android:inputType="numberDecimal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -32,45 +35,55 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_temperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Temparature">
+            android:hint="Enter Temparature in F">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_temperature"
+                android:inputType="numberDecimal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_bp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Blood pressure">
+            android:hint=" Enter Blood pressure (120/80)">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_bp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_oxygen_levels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Oxygen levels">
+            android:hint="Oxygen levels in %">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_oxygen_levels"
                 android:layout_width="match_parent"
+                android:inputType="numberDecimal"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_cretinine_levels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Cretinine levels">
+            android:hint="Enter Cretinine levels 0.5-1.5(generally)">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_cretinine_levels"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -78,6 +91,7 @@
 
 
         <TextView
+            android:id="@+id/tv_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gender"
@@ -85,42 +99,49 @@
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/rg_gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/rb_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:text="Male" />
 
             <RadioButton
+                android:id="@+id/rb_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No" />
+                android:text="Female" />
 
         </RadioGroup>
 
 
         <TextView
+            android:id="@+id/tv_cough"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20sp"
             android:text="Cough"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/rg_cough"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/rb_cough_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Yes" />
 
             <RadioButton
+                android:id="@+id/rb_cough_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No" />
@@ -130,6 +151,7 @@
 
 
         <TextView
+            android:id="@+id/tv_headache"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -138,16 +160,19 @@
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/rg_headache"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/rb_headache_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Yes" />
 
             <RadioButton
+                android:id="@+id/rb_headache_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No" />
@@ -157,24 +182,28 @@
 
 
         <TextView
+            android:id="@+id/tv_chronic_diseases"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Chronic diseases"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/rg_chronic_diseases"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/rb_chronic_diseases_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Yes" />
 
             <RadioButton
+                android:id="@+id/rb_chronic_diseases_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No" />
@@ -183,22 +212,28 @@
         </RadioGroup>
 
         <TextView
+            android:id="@+id/tv_contaced_covid_p"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Contacted covid person?"
-            android:textSize="16sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
 
         <RadioGroup
+            android:id="@+id/rg_contaced_covid_p"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/rb_contaced_covid_p_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Yes" />
 
             <RadioButton
+                android:id="@+id/rb_contaced_covid_p_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No" />
@@ -208,6 +243,7 @@
 
 
         <Button
+            android:id="@+id/btn_predict"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -217,11 +253,13 @@
 
 
         <TextView
+            android:id="@+id/tv_predict"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Result"
-            android:textSize="16sp"
+            android:onClick="predict_method"
+            android:textSize="28sp"
             android:textStyle="bold"/>
 
 
