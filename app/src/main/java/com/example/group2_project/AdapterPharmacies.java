@@ -8,22 +8,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterPharmacies extends RecyclerView.Adapter<AdapterPharmacies.MyViewHolder>{
+public class AdapterPharmacies extends RecyclerView.Adapter<AdapterPharmacies.MyViewHolder> {
 
-    private List<String> pharmaciesList;
-    private TextView message,time;
-
-    public AdapterPharmacies(List<String> pharmaciesList) {
-        this.pharmaciesList = pharmaciesList;
-    }
+    private ArrayList<String> pharmaciesList;
+    private TextView message, time;
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.pharmacy_list_item,viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.pharmacy_list_item, viewGroup, false);
         return new MyViewHolder(view);
     }
 
@@ -34,10 +31,14 @@ public class AdapterPharmacies extends RecyclerView.Adapter<AdapterPharmacies.My
 
     @Override
     public int getItemCount() {
-        return pharmaciesList.size();
+        return pharmaciesList != null ? pharmaciesList.size() : 0;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public void setPharmaciesList(ArrayList<String> pharmacies) {
+        this.pharmaciesList = pharmacies;
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
