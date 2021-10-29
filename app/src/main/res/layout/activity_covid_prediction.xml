@@ -108,12 +108,14 @@
                 android:id="@+id/rb_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="Male" />
 
             <RadioButton
                 android:id="@+id/rb_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="Female" />
 
         </RadioGroup>
@@ -138,12 +140,14 @@
                 android:id="@+id/rb_cough_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/rb_cough_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="No" />
 
 
@@ -169,12 +173,14 @@
                 android:id="@+id/rb_headache_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/rb_headache_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="No" />
 
 
@@ -200,12 +206,14 @@
                 android:id="@+id/rb_chronic_diseases_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/rb_chronic_diseases_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="No" />
 
 
@@ -230,12 +238,14 @@
                 android:id="@+id/rb_contaced_covid_p_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/rb_contaced_covid_p_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioAllCheck"
                 android:text="No" />
 
 
@@ -243,12 +253,13 @@
 
 
         <Button
-            android:id="@+id/btn_predict"
+            android:id="@+id/btn_predict_covid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="12dp"
             android:text="Predict"
+            android:onClick="predict_method"
             android:textSize="16sp" />
 
 
@@ -258,7 +269,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Result"
-            android:onClick="predict_method"
             android:textSize="28sp"
             android:textStyle="bold"/>
 
