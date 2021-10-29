@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.group2_project" >
 
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,12 +21,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainPage"/>
         <activity android:name=".FaqActivity"/>
         <activity android:name=".BmiActivity"/>
         <activity android:name=".VaccinationActivity"/>
         <activity android:name=".CovidPrediction"/>
         <activity android:name=".PharmacyListActivity"/>
+        <activity android:name=".RemindersActivity"/>
     </application>
 
 </manifest>

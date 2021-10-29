@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void medicineReminder(View v){
-        Intent explicit = new Intent(MainActivity.this, MainPage.class);
+        Intent explicit = new Intent(MainActivity.this, RemindersActivity.class);
         startActivity(explicit );
     }
 

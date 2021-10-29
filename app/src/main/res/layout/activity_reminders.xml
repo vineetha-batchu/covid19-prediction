@@ -4,31 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage">
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:background="@drawable/header_layout"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:id="@+id/header1"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        >-->
-<!--        <ImageView-->
-<!--            android:id="@+id/imgBack"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/ic_baseline_keyboard_backspace_24"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            app:tint="@color/white"-->
-<!--            android:contentDescription="@string/app_name" />-->
-
-
-<!--    </LinearLayout>-->
-
-
+    tools:context=".RemindersActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingButton"
@@ -49,6 +25,13 @@
         app:layout_constraintVertical_bias="0.957"
         android:contentDescription="@string/app_name" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
     <TextView
         android:id="@+id/empty"
@@ -60,11 +43,10 @@
         android:gravity="center"
         android:text="No Reminders Set\nClick + to add the reminders"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="@+id/recyclerView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
