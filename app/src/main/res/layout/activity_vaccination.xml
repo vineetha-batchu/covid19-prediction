@@ -13,104 +13,135 @@
         android:textStyle="bold" />
 
     <RadioGroup
+        android:id="@+id/rg_vaccine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/rb_vaccine_moderna"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moderna" />
+            android:text="Moderna"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
+            android:id="@+id/rb_vaccine_pfizer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pfizer" />
+            android:text="Pfizer"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
+            android:id="@+id/rb_vaccine_jj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Johnson and johnson" />
+            android:text="Johnson and johnson"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 
 
     <TextView
+        android:id="@+id/tv_first_dose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Had your First Dose?"
+        android:visibility="gone"
         android:layout_marginTop="12dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <RadioGroup
+        android:id="@+id/rg_firstdose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/rb_firstdose_yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:text="Yes"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
+            android:id="@+id/rb_firstdose_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No" />
+            android:text="No"
+            android:onClick="onRadioButtonClicked"/>
 
 
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_firstdose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:hint="Enter Date">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_firstdose"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/tv_seconddose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Had your Second Dose?"
+        android:visibility="gone"
         android:layout_marginTop="12dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <RadioGroup
+        android:id="@+id/rg_seconddose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/rb_seconddose_yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:text="Yes"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
+            android:id="@+id/rb_seconddose_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No" />
+            android:text="No"
+            android:onClick="onRadioButtonClicked"/>
 
 
     </RadioGroup>
 
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_seconddose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:hint="Enter Date">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_second_dose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/tv_next_dosage_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next Dosage Date"
@@ -119,6 +150,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/tv_next_dosage_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Result displays here"
