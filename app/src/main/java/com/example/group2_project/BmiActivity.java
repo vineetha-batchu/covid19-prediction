@@ -17,8 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class BmiActivity extends AppCompatActivity {
 
     EditText height,weight;
-    Button calculateBtn;
-    TextView bmiTV, youtubeTv;
+    Button calculateBtn, dietChartBtn;
+    TextView bmiTV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class BmiActivity extends AppCompatActivity {
         weight = findViewById(R.id.etWeight);
         calculateBtn = findViewById(R.id.btnCalculate);
         bmiTV = findViewById(R.id.tvResult);
-        youtubeTv = findViewById(R.id.tv_youtube);
+        dietChartBtn = findViewById(R.id.btn_diet_chart);
         calculateBtn.setOnClickListener(v -> {
             if (!height.getText().toString().isEmpty() && !weight.getText().toString().isEmpty())
             {
@@ -41,8 +41,8 @@ public class BmiActivity extends AppCompatActivity {
             }
         });
 
-        youtubeTv.setOnClickListener(v -> {
-            openYouTube();
+        dietChartBtn.setOnClickListener(v -> {
+            openDietChart();
         });
     }
     private void calculateBMI()
@@ -67,10 +67,10 @@ public class BmiActivity extends AppCompatActivity {
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
-    public void openYouTube() {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.euro.who.int/en/health-topics/health-emergencies/coronavirus-covid-19/publications-and-technical-guidance/food-and-nutrition-tips-during-self-quarantine"));
+    public void openDietChart() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.euro.who.int/en/health-topics/health-emergencies/coronavirus-covid-19/publications-and-technical-guidance/food-and-nutrition-tips-during-self-quarantine"));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setPackage("com.google.android.youtube");
+        intent.setPackage("com.android.chrome");
         startActivity(intent);
     }
 }

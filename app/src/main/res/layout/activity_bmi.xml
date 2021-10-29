@@ -95,14 +95,17 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/tv_youtube"
+    <Button
+        android:id="@+id/btn_diet_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Me"
+        android:text="Click Here For Diet Chart"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
         android:layout_gravity="center_horizontal"
         android:gravity="bottom"
-        android:textStyle="bold"
-        android:textSize="30sp"/>
+        android:textAllCaps="false"
+        android:textStyle="bold|italic"
+        android:textSize="14sp"/>
 
 </LinearLayout>
