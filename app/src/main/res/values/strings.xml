@@ -9,5 +9,11 @@
     <string name="weight">Weight</string>
     <string name="enter_weight_in_kg">Enter Weight In Kg</string>
     <string name="calculate">Calculate</string>
+    <string
+        name="messageWithLink"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7222643/">This prediction is based on the results of research paper</a></string>
+    <string name="cretinine_levels">The kidneys are responsible for keeping the level of creatinine in the blood within a normal range.Normal levels of creatinine in the blood are approximately 0.6 to 1.2 milligrams (mg) per deciliter (dL) in adult males and 0.5 to 1.1 milligrams per deciliter in adult females. </string>
+    <string name="bmi_descption_str">The body mass index BMI is a measure that uses your height and weight to work out if your weight is healthy.The BMI calculation divides an adults weight in kilograms by their height in metres squared. For most Adults ideal BMI is in the 18.5 to 24.9 range.</string>
+    <string name="abot_desc_str">This Application helps to identify the probability whether a person can get COVID or not. It also calculates the measure for BMI and suggests a diet chart, Predicts the vaccination date, Pharmacies list which gives the list of pharmacies for covid medicines around 50 miles from Maryville and a medicine remainder.</string>
+    <!--    <string name="bmi_desc">The body mass index BMI is a measure that uses your height and weight to work out if your weight is healthy.The BMI calculation divides an adult\\'s weight in kilograms by their height in metres squared. For most adults, an ideal BMI is in the 18.5 to 24.9 range.</string>-->
 
 </resources>

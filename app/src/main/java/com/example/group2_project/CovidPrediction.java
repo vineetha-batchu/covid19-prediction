@@ -48,50 +48,50 @@ public class CovidPrediction extends AppCompatActivity {
 
     }
 
-    public void onRadioAllCheck(View v) {
-        boolean checked = ((RadioButton) v).isChecked();
-
-        switch (v.getId()) {
-            case R.id.rb_male | R.id.rb_female:
-                checked_gender = true;
-                eachRBCheck();
-                break;
-
-            case R.id.rb_cough_yes | R.id.rb_cough_no:
-                checked_cough = true;
-                eachRBCheck();
-                break;
-
-            case R.id.rb_chronic_diseases_yes | R.id.rb_chronic_diseases_no:
-                checked_chronic = true;
-                eachRBCheck();
-                break;
-
-            case R.id.rb_contaced_covid_p_yes | R.id.rb_contaced_covid_p_no:
-                checked_contacted = true;
-                eachRBCheck();
-                break;
-
-//            case R.id.rb_headache_yes | R.id.rb_headache_no:
-//                checked_headache = true;
+ public void onRadioAllCheck(View v) {}
+//        boolean checked = ((RadioButton) v).isChecked();
+//
+//        switch (v.getId()) {
+//            case R.id.rb_male | R.id.rb_female:
+//                checked_gender = true;
 //                eachRBCheck();
 //                break;
-
-        }
-
-    }
-
-    public void eachRBCheck() {
-
-        if (checked_contacted && checked_chronic && checked_gender && checked_cough ) {
-            btn_predict_covid.setEnabled(true);
-            // tv_predict.setEnabled(true);
-
-        } else {
-            btn_predict_covid.setEnabled(false);
-            // tv_predict.setEnabled(false);
-        }
-
-    }
+//
+//            case R.id.rb_cough_yes | R.id.rb_cough_no:
+//                checked_cough = true;
+//                eachRBCheck();
+//                break;
+//
+//            case R.id.rb_chronic_diseases_yes | R.id.rb_chronic_diseases_no:
+//                checked_chronic = true;
+//                eachRBCheck();
+//                break;
+//
+//            case R.id.rb_contaced_covid_p_yes | R.id.rb_contaced_covid_p_no:
+//                checked_contacted = true;
+//                eachRBCheck();
+//                break;
+//
+////            case R.id.rb_headache_yes | R.id.rb_headache_no:
+////                checked_headache = true;
+////                eachRBCheck();
+////                break;
+//
+//        }
+//
+//    }
+//
+//    public void eachRBCheck() {
+//
+//        if (checked_contacted && checked_chronic && checked_gender && checked_cough ) {
+//            btn_predict_covid.setEnabled(true);
+//            // tv_predict.setEnabled(true);
+//
+//        } else {
+//            btn_predict_covid.setEnabled(false);
+//            // tv_predict.setEnabled(false);
+//        }
+//
+//    }
 
 }
