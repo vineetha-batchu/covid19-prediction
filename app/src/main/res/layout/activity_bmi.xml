@@ -95,5 +95,14 @@
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/tv_youtube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:layout_gravity="center_horizontal"
+        android:gravity="bottom"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
 
 </LinearLayout>
