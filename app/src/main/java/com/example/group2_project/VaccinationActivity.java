@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import androidx.fragment.app.DialogFragment;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -41,7 +43,8 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
     RadioGroup rgFirstDose, rgSecondDose;
     TextInputLayout tilFirstDose, tilSecondDose;
     TextInputEditText tieFirstDose, tieSecondDose;
-    boolean jjSelected;
+    boolean jjSelected, rbSecondDoseSelectedYes, isFirstDoseDateSelected;
+    String firstDoseTimeStamp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -167,10 +170,12 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
                 break;
 
             case R.id.rb_seconddose_yes:
+                rbSecondDoseSelectedYes = true;
                 tilSecondDose.setVisibility(View.VISIBLE);
                 break;
 
             case R.id.rb_seconddose_no:
+                rbSecondDoseSelectedYes = false;
                 tilSecondDose.setVisibility(View.GONE);
                 break;
         }
@@ -186,6 +191,47 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
         SimpleDateFormat simpleDate = new SimpleDateFormat("MM/dd/yyyy");
         String timestamp = simpleDate.format(mCalendar.getTime());
 
-        tieFirstDose.setText(timestamp);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+        if(!sharedPreferences.getBoolean("isFirstDoseDateSelected", false)) {
+            myEdit.putString("secondDoseDate", timestamp);
+            tieSecondDose.setText(timestamp);
+
+        } else {
+            myEdit.putString("firstDoseDate", timestamp);
+            tieFirstDose.setText(timestamp);
+        }
+
+        myEdit.putBoolean("isFirstDoseDateSelected",true);
+        myEdit.commit();
+
+
+
+
+
+        if(rbSecondDoseSelectedYes) {
+            mCalendar.add(Calendar.YEAR, 1);
+            tvNextDosageDate.setText("You will have your boost dose in next year :" + simpleDate.format(mCalendar.getTime()));
+
+        } else {
+            String dtStart = sharedPreferences.getString("firstDoseDate", "");
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+
+            Date date = new Date();
+
+            try {
+                date = format.parse(dtStart);
+                System.out.println(date);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            mCalendar.setTime(date);
+            mCalendar.add(Calendar.DAY_OF_MONTH, 28);
+            String timestampSecondDose = simpleDate.format(mCalendar.getTime());
+            tvNextDosageDate.setText(timestampSecondDose);
+        }
     }
 }
