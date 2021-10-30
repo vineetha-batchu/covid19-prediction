@@ -1,31 +1,19 @@
 package com.example.group2_project;
 
-import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.PendingIntent;
-import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.TimePicker;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -34,14 +22,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
 
 public class VaccinationActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     TextView displayTV, tvFirstDose, tvSecondDose, tvNextDosageHeader, tvNextDosageDate;
     private Dialog dialog;
 
     RadioGroup rgFirstDose, rgSecondDose;
+    RadioButton rbModernaVaccine, rbJJVaccine;
     TextInputLayout tilFirstDose, tilSecondDose;
     TextInputEditText tieFirstDose, tieSecondDose;
     boolean jjSelected, rbSecondDoseSelectedYes, isFirstDoseDateSelected;
@@ -61,6 +48,9 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
 
         rgFirstDose = findViewById(R.id.rg_firstdose);
         rgSecondDose = findViewById(R.id.rg_seconddose);
+
+        rbModernaVaccine = findViewById(R.id.rb_vaccine_moderna);
+        rbJJVaccine = findViewById(R.id.rb_vaccine_jj);
 
         tilFirstDose = findViewById(R.id.til_firstdose);
         tilSecondDose = findViewById(R.id.til_seconddose);
@@ -91,7 +81,7 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
         initSharedPreferences();
     }
 
-    private void initSharedPreferences(){
+    private void initSharedPreferences() {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         myEdit = sharedPreferences.edit();
         myEdit.clear().commit();
@@ -118,10 +108,14 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
 
                     rgFirstDose.clearCheck();
                     rgSecondDose.clearCheck();
+                    tieFirstDose.setText("");
+                    tieSecondDose.setText("");
+                    tvNextDosageDate.setText("");
+                    rbSecondDoseSelectedYes = false;
                 }
                 break;
 
-                case R.id.rb_vaccine_pfizer :
+            case R.id.rb_vaccine_pfizer:
                 Log.d("rb_vaccine_pfizer", "rb_vaccine_pfizer");
                 if (checked) {
                     Log.d("rb_vaccine_pfizer", "rb_vaccine_pfizer");
@@ -137,6 +131,10 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
 
                     rgFirstDose.clearCheck();
                     rgSecondDose.clearCheck();
+                    tieFirstDose.setText("");
+                    tieSecondDose.setText("");
+                    tvNextDosageDate.setText("");
+                    rbSecondDoseSelectedYes = false;
                 }
                 break;
 
@@ -153,7 +151,10 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
 
                     rgFirstDose.clearCheck();
                     rgSecondDose.clearCheck();
-
+                    tieFirstDose.setText("");
+                    tieSecondDose.setText("");
+                    tvNextDosageDate.setText("");
+                    rbSecondDoseSelectedYes = false;
                 }
                 break;
 
@@ -180,7 +181,7 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
                 break;
 
             case R.id.rb_seconddose_yes:
-                rbSecondDoseSelectedYes = true;
+//                rbSecondDoseSelectedYes = true;
                 tilSecondDose.setVisibility(View.VISIBLE);
                 break;
 
@@ -201,35 +202,34 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
         SimpleDateFormat simpleDate = new SimpleDateFormat("MM/dd/yyyy");
         String timestamp = simpleDate.format(mCalendar.getTime());
 
-
-
         setSelectedDateToViews(timestamp);
-//        secondDoseSelection(mCalendar, simpleDate);
+        doNextDoseDateCalculation(mCalendar, simpleDate);
     }
 
     private void setSelectedDateToViews(String timestamp) {
 
-        if(!sharedPreferences.getBoolean("isFirstDoseDateSelected", false)) {
+        if (!sharedPreferences.getBoolean("isFirstDoseDateSelected", false)) {
             myEdit.putString("firstDoseDate", timestamp);
             tieFirstDose.setText(timestamp);
-            myEdit.putBoolean("isFirstDoseDateSelected",true);
+            myEdit.putBoolean("isFirstDoseDateSelected", true);
 
         } else {
             myEdit.putString("secondDoseDate", timestamp);
             tieSecondDose.setText(timestamp);
+            rbSecondDoseSelectedYes = true;
         }
 
         myEdit.commit();
     }
 
-    private void secondDoseSelection(Calendar mCalendar, SimpleDateFormat simpleDate) {
-        if(rbSecondDoseSelectedYes) {
+    private void doNextDoseDateCalculation(Calendar mCalendar, SimpleDateFormat simpleDate) {
+        if (rbSecondDoseSelectedYes) {
             mCalendar.add(Calendar.YEAR, 1);
             tvNextDosageDate.setText("You will have your boost dose in next year :" + simpleDate.format(mCalendar.getTime()));
 
         } else {
             String dtStart = sharedPreferences.getString("firstDoseDate", "");
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
 
             Date date = new Date();
 
@@ -241,7 +241,12 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
             }
 
             mCalendar.setTime(date);
-            mCalendar.add(Calendar.DAY_OF_MONTH, 28);
+            if (rbModernaVaccine.isChecked()) {
+                mCalendar.add(Calendar.DAY_OF_MONTH, 28);
+            } else {
+                mCalendar.add(Calendar.DAY_OF_MONTH, 21);
+            }
+
             String timestampSecondDose = simpleDate.format(mCalendar.getTime());
             tvNextDosageDate.setText(timestampSecondDose);
         }
