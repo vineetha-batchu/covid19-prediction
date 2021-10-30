@@ -30,7 +30,6 @@ public class PharmacyListActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharmacy_list);
-
         btnChooseThePlace = findViewById(R.id.btn_choose_place);
         tvSelectedPlace = findViewById(R.id.tv_selected_place);
         btnChooseThePlace.setOnClickListener(this);
