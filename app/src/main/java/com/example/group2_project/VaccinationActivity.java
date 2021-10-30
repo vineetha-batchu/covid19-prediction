@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
@@ -46,6 +47,9 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
     boolean jjSelected, rbSecondDoseSelectedYes, isFirstDoseDateSelected;
     String firstDoseTimeStamp;
 
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor myEdit;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +72,6 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
         tieFirstDose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Please note that use your package name here
                 MyDatePicker mDatePickerDialogFragment;
                 mDatePickerDialogFragment = new MyDatePicker();
                 mDatePickerDialogFragment.show(getSupportFragmentManager(), "DATE PICK");
@@ -79,12 +82,19 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
         tieSecondDose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Please note that use your package name here
                 MyDatePicker mDatePickerDialogFragment;
                 mDatePickerDialogFragment = new MyDatePicker();
                 mDatePickerDialogFragment.show(getSupportFragmentManager(), "DATE PICK");
             }
         });
+
+        initSharedPreferences();
+    }
+
+    private void initSharedPreferences(){
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        myEdit = sharedPreferences.edit();
+        myEdit.clear().commit();
     }
 
     public void onRadioButtonClicked(View view) {
@@ -192,25 +202,27 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
         String timestamp = simpleDate.format(mCalendar.getTime());
 
 
-        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
-        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+        setSelectedDateToViews(timestamp);
+//        secondDoseSelection(mCalendar, simpleDate);
+    }
+
+    private void setSelectedDateToViews(String timestamp) {
 
         if(!sharedPreferences.getBoolean("isFirstDoseDateSelected", false)) {
-            myEdit.putString("secondDoseDate", timestamp);
-            tieSecondDose.setText(timestamp);
-
-        } else {
             myEdit.putString("firstDoseDate", timestamp);
             tieFirstDose.setText(timestamp);
+            myEdit.putBoolean("isFirstDoseDateSelected",true);
+
+        } else {
+            myEdit.putString("secondDoseDate", timestamp);
+            tieSecondDose.setText(timestamp);
         }
 
-        myEdit.putBoolean("isFirstDoseDateSelected",true);
         myEdit.commit();
+    }
 
-
-
-
-
+    private void secondDoseSelection(Calendar mCalendar, SimpleDateFormat simpleDate) {
         if(rbSecondDoseSelectedYes) {
             mCalendar.add(Calendar.YEAR, 1);
             tvNextDosageDate.setText("You will have your boost dose in next year :" + simpleDate.format(mCalendar.getTime()));
