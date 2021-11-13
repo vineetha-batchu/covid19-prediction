@@ -52,7 +52,7 @@
             android:id="@+id/til_bp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Enter Blood pressure (120/80)">
+            android:hint=" Enter Blood pressure (120/80)mm/Hg">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_bp"
@@ -115,6 +115,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female" />
+            <RadioButton
+                android:id="@+id/rb_otherGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other" />
 
         </RadioGroup>
 
@@ -135,16 +140,21 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/rb_cough_yes"
+                android:id="@+id/rb_cough_low"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:text="Low" />
 
             <RadioButton
-                android:id="@+id/rb_cough_no"
+                android:id="@+id/rb_cough_mod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No" />
+                android:text="Moderate" />
+            <RadioButton
+                android:id="@+id/rb_cough_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High" />
 
 
         </RadioGroup>
@@ -166,16 +176,22 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/rb_headache_yes"
+                android:id="@+id/rb_headache_low"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:text="Low" />
 
             <RadioButton
-                android:id="@+id/rb_headache_no"
+                android:id="@+id/rb_headache_mod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No" />
+                android:text="Moderate" />
+            <RadioButton
+                android:id="@+id/rb_headache_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High" />
+
 
 
         </RadioGroup>
