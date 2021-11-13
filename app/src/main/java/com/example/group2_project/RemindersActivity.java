@@ -27,6 +27,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
+/*
+This activity performs room data base CRUD operations
+ */
 public class RemindersActivity extends AppCompatActivity {
 
     private FloatingActionButton add;
@@ -57,6 +60,7 @@ public class RemindersActivity extends AppCompatActivity {
 
     }
 
+    //This function is dealing with Dialog, Calender, DatePickerDialog, room database operations.
     public void addReminder(){
 
         dialog = new Dialog(RemindersActivity.this);
@@ -135,6 +139,7 @@ public class RemindersActivity extends AppCompatActivity {
 
     }
 
+    //This function setting the items to recyclerview
     public void setItemsInRecyclerView(){
 
         RoomDAO dao = appDatabase.getRoomDAO();
