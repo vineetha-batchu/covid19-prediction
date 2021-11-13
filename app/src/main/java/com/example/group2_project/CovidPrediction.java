@@ -140,7 +140,7 @@ public class CovidPrediction extends AppCompatActivity {
     }
 
     public void predictResult(View v) {
-        if (contaced_person.equalsIgnoreCase("yes") || cret_double > 5 || oxy_double <= 60 || chron.equalsIgnoreCase("yes")) {
+        if (contaced_person.equalsIgnoreCase("yes") || cret_double >= 5 || oxy_double <= 60 || chron.equalsIgnoreCase("yes")) {
 
             tv_predict.setText("Covid Probability: High");
         } else {
