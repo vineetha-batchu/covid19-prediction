@@ -95,17 +95,29 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btn_diet_chart"
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_diet_chart"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Click Here For Diet Chart"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:backgroundTint="@color/white"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:gravity="bottom"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textStyle="bold|italic"-->
+    <!--        android:textSize="14sp"/>-->
+    <TextView
+        android:id="@+id/textViewYouLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Here For Diet Chart"
+        android:layout_centerInParent="true"
         android:background="@color/white"
         android:backgroundTint="@color/white"
-        android:layout_gravity="center_horizontal"
-        android:gravity="bottom"
-        android:textAllCaps="false"
-        android:textStyle="bold|italic"
-        android:textSize="14sp"/>
+        android:gravity="center"
+        android:text="@string/messageWithYLink"
+
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

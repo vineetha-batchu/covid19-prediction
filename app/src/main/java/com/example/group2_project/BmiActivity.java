@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -18,7 +19,7 @@ public class BmiActivity extends AppCompatActivity {
 
     EditText height,weight;
     Button calculateBtn, dietChartBtn;
-    TextView bmiTV;
+    TextView bmiTV,linkTV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,9 @@ public class BmiActivity extends AppCompatActivity {
         weight = findViewById(R.id.etWeight);
         calculateBtn = findViewById(R.id.btnCalculate);
         bmiTV = findViewById(R.id.tvResult);
-        dietChartBtn = findViewById(R.id.btn_diet_chart);
+        linkTV = findViewById(R.id.textViewYouLink);
+        linkTV.setMovementMethod(LinkMovementMethod.getInstance());
+       // dietChartBtn = findViewById(R.id.btn_diet_chart);
         calculateBtn.setOnClickListener(v -> {
             if (!height.getText().toString().isEmpty() && !weight.getText().toString().isEmpty())
             {
@@ -41,9 +44,9 @@ public class BmiActivity extends AppCompatActivity {
             }
         });
 
-        dietChartBtn.setOnClickListener(v -> {
-            openDietChart();
-        });
+//        dietChartBtn.setOnClickListener(v -> {
+//            openDietChart();
+//        });
     }
     private void calculateBMI()
     {
