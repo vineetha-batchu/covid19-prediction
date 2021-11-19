@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
         app:cardUseCompatPadding="true"
@@ -50,7 +51,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:textColorHint="@color/black"
                 android:hint="@string/enter_height_in_inches"
+                android:backgroundTint="@color/teal_200"
+                android:textColor="@color/black"
+
                 android:inputType="number" />
 
             <TextView
@@ -68,6 +73,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/teal_200"
                 android:hint="@string/enter_weight_in_kg"
                 android:inputType="number" />
 

@@ -10,7 +10,10 @@
     <string name="enter_weight_in_kg">Enter Weight In Kg</string>
     <string name="calculate">Calculate</string>
     <string
-        name="messageWithLink"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7222643/">This prediction is based on the results of research paper</a></string>
+        name="messageWithLink"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7222643/">Paper 1</a></string>
+    <string
+        name="messageLink"><a href="https://www.nature.com/articles/s41746-020-00372-6#Sec2">Paper 2</a></string>
+
     <string
         name="messageWithYLink"><a href="http://www.euro.who.int/en/health-topics/health-emergencies/coronavirus-covid-19/publications-and-technical-guidance/food-and-nutrition-tips-during-self-quarantine">Click Here for Diet Chart during Self-Quarantine</a></string>
     <string name="cretinine_levels">The kidneys are responsible for keeping the level of creatinine in the blood within a normal range.Normal levels of creatinine in the blood are approximately 0.6 to 1.2 milligrams (mg) per deciliter (dL) in adult males and 0.5 to 1.1 milligrams per deciliter in adult females. </string>

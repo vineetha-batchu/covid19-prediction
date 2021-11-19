@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FaqActivity extends AppCompatActivity {
-    TextView textlink;
+    TextView textlink,txt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -16,5 +16,8 @@ public class FaqActivity extends AppCompatActivity {
         setContentView(R.layout.activity_faq);
         textlink = findViewById(R.id.textViewLink);
         textlink.setMovementMethod(LinkMovementMethod.getInstance());
+        txt=findViewById(R.id.textViLink);
+        txt.setMovementMethod(LinkMovementMethod.getInstance());
+
     }
 }

@@ -19,6 +19,14 @@
             android:text="On What Basis Covid is Predicted?"
             android:textSize="20sp"
             android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="This app covid prediction is based on the following research papers:"
+            android:textSize="18sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/textViewLink"
@@ -26,6 +34,14 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/messageWithLink"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+        <TextView
+            android:id="@+id/textViLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/messageLink"
             android:textSize="18sp"
             android:textStyle="italic" />
 
@@ -87,6 +103,7 @@
             android:text="@string/abot_desc_str"
             android:textSize="18sp"
             android:textStyle="italic" />
+
 
 
     </LinearLayout>
