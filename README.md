@@ -6,7 +6,7 @@
 
 This project helps to identify the probability whether a person can get COVID or not. This project also provides a screen for calculating the Body Mass Index and a link to WHO'S diet chart will be provided, also this application predicts the vaccination date based on the vaccine and previous dose dates, gives some answers to predefines FAQ’S and a Pharmacy list screen which gives the list of pharmacies around 50 miles from Maryville and a medicine remainder for reminding the medicines.
 
-## Activities: &nbpsp; Main Screen consists of the following screens.
+## Activities: &nbsp; Main Screen consists of the following screens.
 ### Covid-Prediction: 
 Prediction of COVID is done based on oxygen levels, symptoms like Oxygen levels, Creatinine levels, blood pressure, cough, cold, headache, sore throat, asthma, had any chronic diseases like heart diseases, cancer, HIV etc., contacted any person who has covid. 
 ### Vaccination: 
