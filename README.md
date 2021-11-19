@@ -32,6 +32,7 @@ This screen displays answers for a few predefined questions.
 ![covid image](imgs/pic7.png) <br/> ![covid image](imgs/pic8.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![covid image](imgs/pic9.png)
 ### For PharmacyList Screen:
 ![covid image](imgs/pic10.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![covid image](imgs/pic11.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![covid image](imgs/pic12.png)
+![covid image](imgs/flowdiagram.JPG)
 ### APK: <br/>
 [Download APK](https://github.com/saimanideepallu/AndroidGroup02/blob/master/app-debug.apk)
 ### Supported Devices: 
