@@ -33,7 +33,7 @@ This screen displays answers for a few predefined questions.
 ### For PharmacyList Screen:
 ![covid image](imgs/pic10.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![covid image](imgs/pic11.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![covid image](imgs/pic12.png)
 ### APK: <br/>
-[Download APL](https://github.com/saimanideepallu/AndroidGroup02/blob/master/app-debug.apk)
+[Download API](https://github.com/saimanideepallu/AndroidGroup02/blob/master/app-debug.apk)
 ### Supported Devices: 
 Supports Android Devices having OS ranging from Android 5.0(lollipop) to Android 11.0(R)
 
