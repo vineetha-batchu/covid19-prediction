@@ -30,7 +30,6 @@ public class BmiActivity extends AppCompatActivity {
         bmiTV = findViewById(R.id.tvResult);
         linkTV = findViewById(R.id.textViewYouLink);
         linkTV.setMovementMethod(LinkMovementMethod.getInstance());
-       // dietChartBtn = findViewById(R.id.btn_diet_chart);
         calculateBtn.setOnClickListener(v -> {
             if (!height.getText().toString().isEmpty() && !weight.getText().toString().isEmpty())
             {
@@ -44,9 +43,6 @@ public class BmiActivity extends AppCompatActivity {
             }
         });
 
-//        dietChartBtn.setOnClickListener(v -> {
-//            openDietChart();
-//        });
     }
     private void calculateBMI()
     {
@@ -70,11 +66,6 @@ public class BmiActivity extends AppCompatActivity {
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
-    public void openDietChart() {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.euro.who.int/en/health-topics/health-emergencies/coronavirus-covid-19/publications-and-technical-guidance/food-and-nutrition-tips-during-self-quarantine"));
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setPackage("com.android.chrome");
-        startActivity(intent);
-    }
+
 }
 
