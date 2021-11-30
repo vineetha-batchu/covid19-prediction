@@ -6,7 +6,7 @@
 
 This project helps to identify the probability whether a person can get COVID or not. This project also provides a screen for calculating the Body Mass Index and a link to WHO'S diet chart will be provided, also this application predicts the vaccination date based on the vaccine and previous dose dates, gives some answers to predefines FAQ’S and a Pharmacy list screen which gives the list of pharmacies around 50 miles from Maryville and a medicine remainder for reminding the medicines.
 
-## Activities:Main Screen consists of the following screens.
+## Activities: &nbsp; Main Screen consists of the following screens.
 ### Covid-Prediction: 
 Prediction of COVID is done based on oxygen levels, symptoms like Oxygen levels, Creatinine levels, blood pressure, cough, cold, headache, sore throat, asthma, had any chronic diseases like heart diseases, cancer, HIV etc., contacted any person who has covid. 
 ### Vaccination: 
@@ -33,10 +33,11 @@ This screen displays answers for a few predefined questions.
 ### For PharmacyList Screen:
 ![covid image](imgs/pic10.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![covid image](imgs/pic11.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![covid image](imgs/pic12.png)
 ### APK: <br/>
-[Download API](https://github.com/saimanideepallu/AndroidGroup02/blob/master/app-debug.apk)
+[Download APK](https://github.com/saimanideepallu/AndroidGroup02/blob/master/app-debug.apk)
 ### Supported Devices: 
 Supports Android Devices having OS ranging from Android 5.0(lollipop) to Android 11.0(R)
-
+### Sequence Information:
+![covid image](imgs/flowdiagram.JPG)
 
 
 
