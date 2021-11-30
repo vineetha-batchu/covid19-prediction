@@ -224,8 +224,8 @@ public class VaccinationActivity extends AppCompatActivity implements DatePicker
 
     private void doNextDoseDateCalculation(Calendar mCalendar, SimpleDateFormat simpleDate) {
         if (rbSecondDoseSelectedYes) {
-            mCalendar.add(Calendar.YEAR, 1);
-            tvNextDosageDate.setText("You will have your boost dose in next year :" + simpleDate.format(mCalendar.getTime()));
+            mCalendar.add(Calendar.MONTH, 6);
+            tvNextDosageDate.setText("You can have your boost dose after 6 months :" + simpleDate.format(mCalendar.getTime()));
 
         } else {
             String dtStart = sharedPreferences.getString("firstDoseDate", "");
